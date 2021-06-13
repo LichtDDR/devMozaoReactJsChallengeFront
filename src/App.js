@@ -39,13 +39,14 @@ function App() {
       {isLoading ? (
         <div>Loading ...</div>
       ) : (
-      <ul>
+      <div>
         {data.items.map(book => (
             <li>
-            <img src={book.volumeInfo.imageLinks&&book.volumeInfo.imageLinks.thumbnail}  alt="img"/><a href={book.selfLink} >{book.volumeInfo.title}</a>
+              <img href={book.selfLink}src={book.volumeInfo.imageLinks&&book.volumeInfo.imageLinks.thumbnail}  alt="img"/>
+              <a>{book.volumeInfo.title}</a>
             </li>
         ))}
-      </ul>
+      </div>
       )}
     </div>
   );
