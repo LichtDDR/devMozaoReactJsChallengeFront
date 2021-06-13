@@ -33,18 +33,26 @@ function App() {
  
   return (
     <div className="container">
-          <input className="bookSearch" type="text" placeholder="Enter book name" value={query} onChange={event => setQuery(event.target.value)} />
-          <Button variant="danger" onClick={() => setUrl(`https://www.googleapis.com/books/v1/volumes?q=${query}`)}>Enter</Button>
-      <h1>Welcome, {user}</h1>
+      <div className="header">
+        <input className="bookSearch" type="text" placeholder="Enter book name" value={query} onChange={event => setQuery(event.target.value)} />
+        <Button variant="danger" onClick={() => setUrl(`https://www.googleapis.com/books/v1/volumes?q=${query}`)}>Enter</Button>
+        <h1>Welcome, {user}</h1>
+      </div>
       {isLoading ? (
         <div>Loading ...</div>
       ) : (
-      <div>
+      <div className="book">
         {data.items.map(book => (
-            <li>
-              <img href={book.selfLink}src={book.volumeInfo.imageLinks&&book.volumeInfo.imageLinks.thumbnail}  alt="img"/>
-              <a>{book.volumeInfo.title}</a>
-            </li>
+              <div className="product">
+                <a href={book.selfLink}>
+                  <img src={book.volumeInfo.imageLinks&&book.volumeInfo.imageLinks.thumbnail}  alt="img"/>
+                  {book.volumeInfo.title}
+                </a>
+                  <div className="author">
+                      <h3>Authors: {book.volumeInfo.authors}</h3>
+                  </div>
+                  <p>{book.totalItems}</p>
+                </div>
         ))}
       </div>
       )}

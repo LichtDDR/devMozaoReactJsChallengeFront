@@ -6,8 +6,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.book {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.header {
+  background-color: #ccc;
+  width: 100%;
+}
 ul li {
   display: inline-block;
+}
+.author {
+  color: blue;
 }
 .bookSearch {
   width: 40%;
