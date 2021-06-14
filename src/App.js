@@ -1,70 +1,13 @@
 import './App.css';
-import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import axios from 'axios';
-import { Form } from 'react-bootstrap';
 import CSS from './index.css';
 import { useState, useEffect } from 'react';
-const user = 'Mikael';
+import BookSearch from './BookSearch';
 
 function App() {
-  const [data, setData] = useState({ items: [], volumeInfo: "", id: ""});
-  const [query, setQuery] = useState('');
-  const [url, setUrl] = useState(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
-  const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsError] = useState(false);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      setIsLoading(true);
-      setIsError(false);
-
-      try {
-        const result = await axios(url);
-
-        setData(result.data);
-      } catch(error) {
-        setIsError(true);
-      }
-      setIsLoading(false);
-    };
-    fetchData();
-  }, [url]);
  
   return (
-    <div className="container">
-      <header>
-        <nav>
-          <img src="" />
-          <ul>
-            <li><a href="#">Perfil</a></li>
-            <li><a href="#">Carrinho</a></li>
-            <li><a href="#">Sobre nós</a></li>
-          </ul>
-        </nav>
-        <input className="bookSearch" type="text" placeholder="Enter book name" value={query} onChange={event => setQuery(event.target.value)} />
-        <Button variant="danger" onClick={() => setUrl(`https://www.googleapis.com/books/v1/volumes?q=${query}`)}>Enter</Button>
-        <h1>Welcome, {user}</h1>
-      </header>
-      {isLoading ? (
-        <div>Loading ...</div>
-      ) : (
-      <div className="book">
-        {data.items.map(book => (
-              <div className="product">
-                <a href={book.selfLink}>
-                  <img src={book.volumeInfo.imageLinks&&book.volumeInfo.imageLinks.thumbnail}  alt="img"/>
-                </a>
-                  <div className="author">
-                    {book.volumeInfo.title}
-                    <h5>Authors: {book.volumeInfo.authors}</h5>
-                    <Button className="buy" variant="danger">Comprar</Button>
-                  </div>
-              </div>
-        ))}
-      </div>
-      )}
-    </div>
+    <BookSearch />
   );
 }
 
