@@ -33,11 +33,19 @@ function App() {
  
   return (
     <div className="container">
-      <div className="header">
+      <header>
+        <nav>
+          <img src="" />
+          <ul>
+            <li><a href="#">Perfil</a></li>
+            <li><a href="#">Carrinho</a></li>
+            <li><a href="#">Sobre nós</a></li>
+          </ul>
+        </nav>
         <input className="bookSearch" type="text" placeholder="Enter book name" value={query} onChange={event => setQuery(event.target.value)} />
         <Button variant="danger" onClick={() => setUrl(`https://www.googleapis.com/books/v1/volumes?q=${query}`)}>Enter</Button>
         <h1>Welcome, {user}</h1>
-      </div>
+      </header>
       {isLoading ? (
         <div>Loading ...</div>
       ) : (
