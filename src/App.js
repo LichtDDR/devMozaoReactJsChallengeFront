@@ -49,7 +49,7 @@ function App() {
                 </a>
                   <div className="author">
                     {book.volumeInfo.title}
-                    <h4>Authors: {book.volumeInfo.authors}</h4>
+                    <h5>Authors: {book.volumeInfo.authors}</h5>
                     <Button className="buy" variant="danger">Comprar</Button>
                   </div>
               </div>

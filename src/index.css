@@ -38,15 +38,16 @@ code {
     monospace;
 }
 .product {
-  width: 50%;
+  width: 70%;
   height: 100%;
-  background-color: #ccc;
+  background-color: white;
   text-align: center;
   border-radius: 14px;
+  padding-top: 15px;
 }
 .container {
   background-color: red;
 }
 .buy {
-  padding-bottom: 15px;
+  padding-bottom: 3px;
 }
