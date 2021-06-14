@@ -12,6 +12,7 @@ body {
 }
 .header {
   background-color: #ccc;
+  border-radius: 15px;
   width: 100%;
 }
 ul li {
@@ -35,4 +36,17 @@ ul li {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.product {
+  width: 50%;
+  height: 100%;
+  background-color: #ccc;
+  text-align: center;
+  border-radius: 14px;
+}
+.container {
+  background-color: red;
+}
+.buy {
+  padding-bottom: 15px;
 }

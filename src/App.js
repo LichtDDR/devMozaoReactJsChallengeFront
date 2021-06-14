@@ -46,13 +46,13 @@ function App() {
               <div className="product">
                 <a href={book.selfLink}>
                   <img src={book.volumeInfo.imageLinks&&book.volumeInfo.imageLinks.thumbnail}  alt="img"/>
-                  {book.volumeInfo.title}
                 </a>
                   <div className="author">
-                      <h3>Authors: {book.volumeInfo.authors}</h3>
+                    {book.volumeInfo.title}
+                    <h4>Authors: {book.volumeInfo.authors}</h4>
+                    <Button className="buy" variant="danger">Comprar</Button>
                   </div>
-                  <p>{book.totalItems}</p>
-                </div>
+              </div>
         ))}
       </div>
       )}
