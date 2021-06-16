@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 import css from './index.css';
@@ -94,5 +94,3 @@ const BookSearch = () => {
 }
 
 export default BookSearch;
-export default Toolbar;
-export default ThemedButton;
