@@ -11,7 +11,34 @@ const BookSearch = () => {
     const [url, setUrl] = useState(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
     const [isLoading, setIsLoading] = useState(false);
     const [isError, setIsError] = useState(false);
+    const themes = {
+      light: {
+        foreground: "#000000",
+        background: "#eeeeee"
+      },
+      dark: {
+        foreground: "#ffffff",
+        background: "#222222"
+      }
+    }
+    const ThemeContext = React.createContext(themes.light);
 
+    function ThemedButton() {
+      const theme = useContext(ThemeContext);
+      return (
+        <button style={{ background: theme.background, color: theme.foreground }}>
+          I am styled by theme context!
+        </button>
+      );
+    }
+    
+    function Toolbar(props) {
+      return (
+        <div>
+          <ThemedButton />
+        </div>
+      );
+    }
     useEffect(() => {
         const fetchData = async () => {
           setIsLoading(true);
@@ -67,3 +94,5 @@ const BookSearch = () => {
 }
 
 export default BookSearch;
+export default Toolbar;
+export default ThemedButton;
