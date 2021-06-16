@@ -3,6 +3,7 @@ import { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 import css from './index.css';
+import Footer from './footer.js';
 const user = 'Mikael';
 
 const BookSearch = () => {
@@ -83,12 +84,13 @@ const BookSearch = () => {
                       <div className="author">
                         {book.volumeInfo.title}
                         <h5>Authors: {book.volumeInfo.authors}</h5>
-                        <Button className="buy" variant="danger">Comprar</Button>
+                        <Button className="buy" variant="dark">Comprar</Button>
                       </div>
                   </div>
             ))}
           </div>
           )}
+          <Footer />
         </div>
       );
 }

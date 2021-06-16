@@ -4,7 +4,7 @@ import CSS from './index.css';
 import { useState, useEffect } from 'react';
 import BookSearch from './BookSearch';
 
-function App() {
+const App = () => {
  
   return (
     <BookSearch />
