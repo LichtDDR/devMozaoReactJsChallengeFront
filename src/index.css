@@ -50,7 +50,6 @@ code {
   padding-top: 15px;
 }
 .container {
-  background-color: red;
   padding: none;
 }
 .buy {
@@ -59,4 +58,10 @@ code {
 ul li {
   display: inline-block;
   padding: 5px;
+  text-decoration: none;
+  float: right;
+}
+ul li a:hover {
+  text-decoration: none;
+  color: black;
 }
