@@ -62,7 +62,7 @@ const BookSearch = () => {
           <header>
             <nav>
               <ul>
-                <img className="logo" src="https://lh3.googleusercontent.com/proxy/6gJAinu8Q4upys2C_6REWj8yOkbUwxKKN6i9ckaUSJSKYsJ46Zow3MCOigcsk2W5MKJ86vmKsd9EeJZLKtZHh-yg1NNmx0B3mqPyLfKOPpX0y5dQ5R_3kWoP72vX9EDnNFceLhepUQfbf5NR" />
+                <img className="logo" src="https://miro.medium.com/max/2348/1*1x-zCkEPxfPb6c0HbVIZWw.png" />
                 <li><a href="#">Perfil</a></li>
                 <li><a href="#">Carrinho</a></li>
                 <li><a href="#">Sobre nós</a></li>

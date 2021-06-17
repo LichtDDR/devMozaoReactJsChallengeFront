@@ -6,9 +6,9 @@ const Footer = () => {
     return (
         <div className="footer">
             <h1>Contato</h1>
-            <h3>Teste</h3>
+            <p>(11) 9XXXX-XXXX</p>
             <div className="rights">
-                <h3>Direitos reservados à Mikael 2021</h3>
+                <h5>Direitos reservados à Mikael 2021</h5>
             </div>
         </div>
     );
